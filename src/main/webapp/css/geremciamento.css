@@ -1,0 +1,226 @@
+/* ===========================
+   CABEÇALHO
+=========================== */
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    padding: 15px 20px;
+    background-color: var(--primary-medium);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px var(--shadow-default);
+}
+
+#header h1 {
+    margin: 0;
+    color: var(--white);
+}
+
+#topoGerenciamento {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#linkTopo a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-dark);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.25s;
+}
+
+#linkTopo a:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-2px);
+}
+
+
+/* ===========================
+   SEÇÕES
+=========================== */
+
+section {
+    margin: 30px 20px;
+}
+
+
+/* ===========================
+   CARDS DE RESUMO
+=========================== */
+
+#resumoEstoque {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card-resumo {
+    width: 230px;
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px var(--shadow-default);
+    transition: .25s;
+}
+
+.card-resumo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px var(--shadow-default);
+}
+
+.titulo-card {
+    font-size: 18px;
+    color: var(--primary-medium);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.valor-card {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--primary-dark);
+}
+
+
+/* ===========================
+   FORMULÁRIO
+=========================== */
+
+
+
+
+/* ===========================
+   TABELA
+=========================== */
+
+.topo-tabela {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.tabela-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px var(--shadow-default);
+}
+
+#tabelaEstoque {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tabelaEstoque th,
+#tabelaEstoque td {
+    padding: 14px;
+    text-align: center;
+}
+
+#tabelaEstoque th {
+    background-color: var(--primary-medium);
+    color: var(--white);
+    font-weight: bold;
+}
+
+#tabelaEstoque tr {
+    transition: .2s;
+}
+
+#tabelaEstoque tr:nth-child(even) {
+    background-color: var(--gray-light);
+}
+
+#tabelaEstoque tr:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+
+/* ===========================
+   PAGINAÇÃO
+=========================== */
+
+#paginacao {
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.controle-paginacao {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.controle-paginacao label {
+    color: var(--primary-dark);
+    font-weight: bold;
+}
+
+#pagina {
+    padding: 8px;
+    border: 1px solid var(--primary-medium);
+    border-radius: 8px;
+}
+
+#btnVoltar,
+#btnProximo {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--primary-medium);
+    color: var(--white);
+    font-weight: bold;
+    cursor: pointer;
+    transition: .25s;
+}
+
+#btnVoltar:hover,
+#btnProximo:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+
+/* ===========================
+   RESPONSIVIDADE
+=========================== */
+
+@media (max-width: 768px) {
+
+    #header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    #topoGerenciamento {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #modificarProduto {
+        width: 90%;
+    }
+
+    #resumoEstoque {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-resumo {
+        width: 90%;
+    }
+}
